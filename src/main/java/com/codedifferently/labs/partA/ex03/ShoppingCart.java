@@ -18,12 +18,19 @@ public class ShoppingCart {
 
 
         // Declare outOfStock variable and initialize it
-
+        boolean outOfStock = false;
 
         // Test quantity and modify message if quantity > 1.
-
+        if (quantity > 1) {
+            message += "s";
+        }
+        response += message + "\nTotal cost with tax: " + total;
 
         // Test outOfStock and notify user in either case.
+        if (quantity == 0) {
+            response = "This item is out of stock";
+
+        }
 
 
         return response;

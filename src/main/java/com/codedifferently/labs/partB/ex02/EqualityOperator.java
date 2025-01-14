@@ -7,7 +7,13 @@ public class EqualityOperator {
         String num2 = "5";
 
         /* Your code goes here*/
-
+        boolean tof = false;
+        if (num1.equals(num2)) {
+            tof = true;
+            response += "Are " + num1 + " and " + num2 + " equal? " + tof;
+        } else {
+            response += "Are " + num1 + " and " + num2 + " equal? " + tof;
+        }
 
         return response;
     }

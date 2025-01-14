@@ -13,8 +13,16 @@ public class AlgoChallenge {
      */
 
     public static Boolean startWithIx(String phrase) {
+        boolean response;
+        String ix = phrase.substring(1, 3);
 
-        return null;
+        if (ix.equals("ix")) {
+            response = true;
+        } else {
+            response = false;
+        }
+
+        return response;
     }
 
      /* Problem 1
@@ -29,7 +37,28 @@ public class AlgoChallenge {
      */
 
     public static Integer near10(int one, int two){
+        int one1 = one;
+        int two1 = two;
 
+        if (one < 10) {
+            one1 = one - 10;
+        } else {
+            one1 = 10 - one;
+        }
+
+        if (two < 10) {
+            two1 = two - 10;
+        } else {
+            two1 = 10 - two;
+        }
+
+        if (one1 == two1) {
+            return 0;
+        } else if (one1 > two1) {
+            return one;
+        } else if (two1 > one1) {
+            return two;
+        }
         return null;
     }
 
